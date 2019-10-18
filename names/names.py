@@ -3,7 +3,7 @@ import os
 from os.path import abspath
 from lru_cache import *
 
-#Original running complexity was n**2
+# Original running complexity was n**2
 
 start_time = time.time()
 file_directory = os.path.dirname(abspath(__file__))
@@ -29,8 +29,8 @@ for index in range(len(names_1)):
         duplicates.append(names_1[index])
 
 end_time = time.time()
-print (f"{len(duplicates)} duplicates:\n\n{', '.join(sorted(duplicates))}\n\n")
-print (f"runtime: {end_time - start_time} seconds")
+print(f"{len(duplicates)} duplicates:\n\n{', '.join(sorted(duplicates))}\n\n")
+print(f"runtime: {end_time - start_time} seconds")
 
 
 """
