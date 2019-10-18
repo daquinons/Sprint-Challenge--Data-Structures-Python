@@ -1,6 +1,8 @@
 import time
 from lru_cache import *
 
+#Original running complexity was n**2
+
 start_time = time.time()
 
 f = open('names_1.txt', 'r')
@@ -13,7 +15,7 @@ f.close()
 
 duplicates = []
 cache = lru_cache.LRUCache(len(names_1))
-for name_1 in names_1:
+for index, name_1 in iter(name_1):
     cache.set(name_1, True)
 
 for name_2 in names_2:
